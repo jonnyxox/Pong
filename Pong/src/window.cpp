@@ -32,7 +32,7 @@ bool window::init()
 	if (IMG_Init(IMG_INIT_PNG) != IMG_INIT_PNG) {
 		std::cerr << "Failed to intialise SDL_image.\n";
 		return false;
-	} 
+	}
 
 	if (TTF_Init() == -1)
 	{
@@ -61,7 +61,7 @@ bool window::init()
 	return true;
 };
 
-void window::poll_events(SDL_Event &event) {
+/*void window::poll_events(SDL_Event &event) {
 
 	switch (event.type) {
 	case SDL_QUIT:
@@ -74,6 +74,18 @@ void window::poll_events(SDL_Event &event) {
 			break;
 		}
 	default: break;
+	}
+}*/
+
+void window::poll_events(const Uint8 *keystate) {
+	if (keystate[SDL_SCANCODE_ESCAPE]) {
+		closed = true;
+	}
+}
+
+void window::x_close_chk(SDL_Event &event) {
+	if (event.type == SDL_QUIT) {
+		closed = true;
 	}
 }
 

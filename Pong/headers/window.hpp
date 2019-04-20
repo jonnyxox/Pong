@@ -7,7 +7,9 @@ public:
 	window(const std::string &_title, int _width, int _height);
 	~window();
 
-	void poll_events(SDL_Event &event);
+	//void poll_events(SDL_Event &event);
+	void poll_events(const Uint8 *keystate);
+	void x_close_chk(SDL_Event &event);
 	void clear() const;
 
 	inline bool is_closed() const { return closed; }

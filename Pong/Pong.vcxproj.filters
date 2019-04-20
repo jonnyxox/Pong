@@ -33,7 +33,7 @@
     <ClCompile Include="src\_game_obj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\score.cpp">
+    <ClCompile Include="src\show_score.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,7 +53,7 @@
     <ClInclude Include="headers\court.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\score.hpp">
+    <ClInclude Include="headers\show_score.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

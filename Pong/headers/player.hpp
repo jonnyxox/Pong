@@ -11,6 +11,7 @@ public:
 	//void poll_events(SDL_Event &event);
 	void poll_events(const Uint8 *keystate);
 
+	int score{ 0 };
 private:
 	int n;
 	float spd{ 10 };

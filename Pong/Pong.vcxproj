@@ -158,7 +158,7 @@
     <ClCompile Include="src\court.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
-    <ClCompile Include="src\score.cpp" />
+    <ClCompile Include="src\show_score.cpp" />
     <ClCompile Include="src\window.cpp" />
     <ClCompile Include="src\_game_obj.cpp" />
   </ItemGroup>
@@ -166,7 +166,7 @@
     <ClInclude Include="headers\ball.hpp" />
     <ClInclude Include="headers\court.hpp" />
     <ClInclude Include="headers\player.hpp" />
-    <ClInclude Include="headers\score.hpp" />
+    <ClInclude Include="headers\show_score.hpp" />
     <ClInclude Include="headers\window.hpp" />
     <ClInclude Include="headers\_game_obj.hpp" />
   </ItemGroup>

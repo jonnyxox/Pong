@@ -2,7 +2,7 @@
 #include <stdexcept>
 
 #include "window.hpp"
-#include "score.hpp"
+#include "show_score.hpp"
 
 score::score(SDL_Renderer *renderer,
 	const std::string &font_path,

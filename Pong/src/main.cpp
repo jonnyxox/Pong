@@ -6,12 +6,17 @@
 #include "player.hpp"
 #include "ball.hpp"
 #include "court.hpp"
-#include "score.hpp"
+#include "show_score.hpp"
 
 
-void poll_all_events(const Uint8 *keystate, player &player1, player &player2) {
+void poll_all_events(window &window, const Uint8 *keystate, player &player1, player &player2 ) {
+	SDL_Event event;
 	player1.poll_events(keystate);
 	player2.poll_events(keystate);
+	if (SDL_PollEvent(&event)) {
+		window.x_close_chk(event);
+	}
+	window.poll_events(keystate);
 }
 
 /*void poll_events(window &window, player &player1, player &player2) {
@@ -40,14 +45,9 @@ int main(int argc, char *argv[]) {
 	while (!pong_window.is_closed()) {
 		
 		//poll_events(pong_window, player1, player2);
-		
 		SDL_PumpEvents();
-		
-		if (keystate[SDL_SCANCODE_RETURN]) {
-			printf("<RETURN> is pressed.\n");
-		}
-		poll_all_events(keystate, player1, player2);
-		
+		//SDL_Event event;
+		poll_all_events(pong_window, keystate, player1, player2);
 		court_net.draw();
 		score1.display(260,100, window::renderer);
 		score2.display(480,100, window::renderer);
