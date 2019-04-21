@@ -19,7 +19,6 @@ score::score(SDL_Renderer *renderer,
 void score::display(int x, int y, SDL_Renderer *renderer, int player_score) const {
 	score_rect.x = x;
 	score_rect.y = y;
-//  SDL_RenderCopy(renderer, score_texture, nullptr, &score_rect);
 	SDL_RenderCopy(renderer, texture_number[player_score], nullptr, &score_rect);
 }
 

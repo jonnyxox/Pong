@@ -23,9 +23,9 @@ int main(int argc, char *argv[]) {
 
 	window pong_window("Pong", 800, 600);
 	int font_size{ 80 };
-	player player1(1, 100, 100);
-	player player2(2, 700, 500);
-	ball ball(1,1);
+	player player1(1, 100, 300);
+	player player2(2, 700, 300);
+	ball ball(1,0);
 	court court_net;
 	score score1(window::renderer, "D:/CPP_graphics/Pong/src/bit5x5.ttf", font_size, std::to_string(ball.score_p1), {100, 100, 100, 255});
 	score score2(window::renderer, "D:/CPP_graphics/Pong/src/bit5x5.ttf", font_size, std::to_string(ball.score_p2), { 100, 100, 100, 255 });

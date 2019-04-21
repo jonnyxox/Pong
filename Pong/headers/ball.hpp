@@ -5,8 +5,6 @@
 class ball : public game_obj {
 public:
 	ball(float _x_move, float _y_move);
-	ball();
-
 	void move_ball();
 	void chk_collision(const float &p_x, const float &p_y, const int &p_w, const int &p_h);
 	void check_scores();
