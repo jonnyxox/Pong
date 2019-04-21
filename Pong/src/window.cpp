@@ -61,22 +61,6 @@ bool window::init()
 	return true;
 };
 
-/*void window::poll_events(SDL_Event &event) {
-
-	switch (event.type) {
-	case SDL_QUIT:
-		closed = true;
-		break;
-	case SDL_KEYDOWN:
-		switch (event.key.keysym.sym) {
-		case SDLK_ESCAPE:
-			closed = true;
-			break;
-		}
-	default: break;
-	}
-}*/
-
 void window::poll_events(const Uint8 *keystate) {
 	if (keystate[SDL_SCANCODE_ESCAPE]) {
 		closed = true;
@@ -93,9 +77,4 @@ void window::clear() const {
 	SDL_RenderPresent(renderer);
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // sets color for renderer
 	SDL_RenderClear(renderer); // gets color onto renderer
-
-
-
-
-
 }

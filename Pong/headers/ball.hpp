@@ -9,9 +9,14 @@ public:
 
 	void move_ball();
 	void chk_collision(const float &p_x, const float &p_y, const int &p_w, const int &p_h);
+	void check_scores();
+
+public:
+	int score_p1{ 0 };
+	int score_p2{ 0 };
 
 private:
 	float x_move{ 0.0 }, y_move{ 0.0 };
-	float spd{ 15.0};
-
+	float spd{ 10.0};
+	bool ball_in_play{ true };
 };

@@ -15,7 +15,4 @@ void game_obj::draw() const {
 	SDL_RenderFillRect(window::renderer, &rect);
 }
 
-void game_obj::poll_event(SDL_Event &event) {
-
-}
 

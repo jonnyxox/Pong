@@ -2,18 +2,22 @@
 #include <iostream>
 #include <math.h>      
 
+#include "window.hpp"
 #include "ball.hpp"
+#include "show_score.hpp"
 
 
 ball::ball(float _x_move, float _y_move) :
 	x_move{ _x_move },
 	y_move{ _y_move }
-{w = 12; h = 12, x = 400; y = 300; r = 100;	g = 100; b = 100; a = 255; }
+{w = 12; h = 12, x = 400; y = 300; r = 100;	g = 100; b = 100; a = 255; 
+}
 
 ball::ball() :
 	x_move{ 1 },
 	y_move{ 1 }
-{w = 12; h = 12, x = 400; y = 300; r = 100;	g = 100; b = 100; a = 255; }
+{w = 12; h = 12, x = 400; y = 300; r = 100;	g = 100; b = 100; a = 255; 
+}
 
 void ball::move_ball() {
 	x += x_move / spd;
@@ -34,4 +38,18 @@ void ball::chk_collision(const float &p_x, const float &p_y, const int &p_w, con
 		//y_move *= -1;
 	}
 
+}
+
+void ball::check_scores() {
+	if (ball_in_play && x < 80) {
+		ball_in_play = false;
+		score_p1 += 1;
+		std::cout << std::boolalpha << ball_in_play << ",p1 " << score_p1 << "\n";
+	}
+	if (ball_in_play && x > 720) {
+		ball_in_play = false;
+		score_p2 += 1;
+		std::cout << std::boolalpha << ball_in_play << ",p2 " << score_p2 << "\n";
+	}
+	if (x > 100 && x < 700) { ball_in_play = true; }
 }
