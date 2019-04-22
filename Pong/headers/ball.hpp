@@ -8,6 +8,7 @@ public:
 	void move_ball();
 	void chk_collision(const float &p_x, const float &p_y, const int &p_w, const int &p_h);
 	void check_scores();
+	void reset_game();
 
 public:
 	int score_p1{ 0 };

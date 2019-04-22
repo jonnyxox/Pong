@@ -6,7 +6,7 @@
 player::player(int _n, float _x, float _y) :
 	n{ _n }
 {
-	w = 10; h = 60, x = _x, y = _y, r = 100; g = 100; b = 100; a = 255;
+	w = 10; h = 60, x = _x, y = _y;
 }
 
 void player::poll_events(const Uint8 *keystate)

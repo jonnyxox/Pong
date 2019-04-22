@@ -10,9 +10,9 @@ public:
 	~game_obj() = default;
 
 	void draw() const;
-	void poll_event(SDL_Event &event);
+	//void poll_event(SDL_Event &event);
 	
 	int w{ 0 }, h{ 0 };
 	float x{ 0 }, y{ 0 };
-	int r{ 0 }, g{ 0 }, b{ 0 }, a{ 0 };
+	int r{ 200 }, g{ 200 }, b{ 200 }, a{ 255 };
 };

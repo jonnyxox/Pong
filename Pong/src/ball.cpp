@@ -1,6 +1,5 @@
 #include <SDL_image.h>
 #include <iostream>
-#include <math.h>
 #include <algorithm>    // std::min
 
 #include "window.hpp"
@@ -11,7 +10,7 @@
 ball::ball(float _x_move, float _y_move) :
 	x_move{ _x_move },
 	y_move{ _y_move }
-{w = 12; h = 12, x = 400; y = 300; r = 100;	g = 100; b = 100; a = 255; 
+{w = 12; h = 12, x = 400; y = 300; 
 }
 
 /*ball::ball() :
@@ -48,12 +47,17 @@ void ball::check_scores() {
 	if (ball_in_play && x < 80) {
 		ball_in_play = false;
 		score_p1 += 1;
-		std::cout << std::boolalpha << ball_in_play << ",p1 " << score_p1 << "\n";
 	}
 	if (ball_in_play && x > 720) {
 		ball_in_play = false;
 		score_p2 += 1;
-		std::cout << std::boolalpha << ball_in_play << ",p2 " << score_p2 << "\n";
 	}
 	if (x > 100 && x < 700) { ball_in_play = true; }
+}
+
+void ball::reset_game() {
+	score_p1 = 0 ;
+	score_p2 = 0 ;
+	x = 400;
+	y = 300;
 }

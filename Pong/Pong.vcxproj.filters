@@ -36,6 +36,9 @@
     <ClCompile Include="src\show_score.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\show_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\window.hpp">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="headers\show_score.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\show_win.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

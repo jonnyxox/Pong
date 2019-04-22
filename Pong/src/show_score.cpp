@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "window.hpp"
 #include "show_score.hpp"
 
@@ -39,7 +38,6 @@ SDL_Texture *score::loadFont(SDL_Renderer *renderer,
 		std::cerr << "Failed to create score surface.\n";
 	}
 	auto score_texture = SDL_CreateTextureFromSurface(renderer, score_surface);
-	//std::cout << typeid(score_texture).name() << '\n';
 	if (!score_texture) {
 		std::cerr << "Failed to create score texture.\n";
 	}

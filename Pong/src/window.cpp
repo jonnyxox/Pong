@@ -75,6 +75,6 @@ void window::x_close_chk(SDL_Event &event) {
 
 void window::clear() const {
 	SDL_RenderPresent(renderer);
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // sets color for renderer
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // sets background color for renderer
 	SDL_RenderClear(renderer); // gets color onto renderer
 }
